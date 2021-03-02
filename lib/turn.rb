@@ -7,6 +7,10 @@ def display_board(board)
    puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+def turn(board)
+  puts "please enter 1-9:"
+end
+
 def valid_move?
     if index.between?(0,8) && !position_taken?(board, index)
       return true
