@@ -9,28 +9,17 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip
-  index = input_to_index(user_input)
-  if valid_move?(board, index)
-    move(board, index, player)
-    #turn(board)
+  num = gets.chomp
+  index = input_to_index(num)
+  if valid_move?(board, index) == true
+    move(board, index)
     display_board(board)
   else
-      puts "Please enter 1-9:"
+    turn(board)
   end
-  
 end
 
-def turn_count(board)
-   counter = 0
-   board.each do |spaces|
-      if spaces == "X" || spaces == "O"
-         counter += 1
-      end
-   end
-   counter
-end
-    
+
 def player(board)
    turn_count(board) % 2 == 0 ? "X" : "O"
 end
