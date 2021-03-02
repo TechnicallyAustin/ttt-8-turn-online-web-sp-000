@@ -8,7 +8,12 @@ def display_board(board)
 end
 
 def turn(board)
-  puts "please enter 1-9:"
+  puts "Please enter 1-9:"
+  input = gets.strip
+  
+  if input_to_index(input)
+    
+  
 end
 
 def input_to_index(input)
