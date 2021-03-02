@@ -37,6 +37,7 @@ end
 
 def input_to_index(input)
   move = input.to_i - 1
+  move
 end
   
 
